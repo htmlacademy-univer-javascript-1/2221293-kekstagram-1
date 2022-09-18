@@ -8,7 +8,7 @@ function getRandomNumber(start, end){
 }
 
 function checkLineLength(line, maxLength){
-  return (line.length <= maxLength);
+  return (String(line).length <= maxLength);
 }
 
 getRandomNumber(10,20);
