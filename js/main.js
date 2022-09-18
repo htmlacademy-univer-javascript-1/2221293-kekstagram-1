@@ -12,4 +12,4 @@ function checkLineLength(line, maxLength){
 }
 
 getRandomNumber(10,20);
-checkLineLength("Строка",4);
+checkLineLength('Строка',4);
