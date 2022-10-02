@@ -1,5 +1,5 @@
-import {getRandomNumber} from "./get-random-number";
-import {getRandomElement} from "./util";
+import {getRandomNumber} from './get-random-number';
+import {getRandomElement} from './util';
 
 const PHOTOS_COUNT = 25;
 const NAMES = [
@@ -30,7 +30,7 @@ const DESCRIPTIONS = [
 const photosArray = [];
 
 const addComments = (count) => {
-  commentsArray = [];
+  const commentsArray = [];
   for(let i = 0; i < count; i++){
     commentsArray.push({
       id: i,
