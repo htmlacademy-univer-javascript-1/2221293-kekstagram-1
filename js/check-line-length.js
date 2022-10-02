@@ -1,5 +1,3 @@
-const checkLineLength = (line, maxLength) => {
-  return line.length < maxLength;
-};
+const checkLineLength = (line, maxLength) => line.length < maxLength;
 
 export{checkLineLength};
