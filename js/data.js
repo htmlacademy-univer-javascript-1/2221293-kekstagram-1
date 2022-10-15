@@ -55,3 +55,4 @@ const addPhotos = () => {
 };
 
 export{addPhotos};
+export {photosArray};
