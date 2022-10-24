@@ -4,7 +4,7 @@ const getRandomNumber = (start, end) => {
   }
   start = Math.min(start,end);
   end = Math.max(start, end);
-  return Math.round(Math.random()* (end - start + 1) + start);
+  return Math.round(Math.random()* (end - start) + start);
 };
 
 export{getRandomNumber};
