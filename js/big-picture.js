@@ -7,6 +7,15 @@ const closingButton = bigPicture.querySelector('.big-picture__cancel');
 
 const commentTemplate = bigPicture.querySelector('.social__comment');
 
+const onDocumentEscKeyDown = (evt) => {
+  if(evt.key === 'Escape'){
+    bigPicture.classList.add('hidden');
+    document.body.classList.remove('modal-open');
+
+    document.removeEventListener('keydown', onDocumentEscKeyDown);
+  }
+};
+
 const addOnPictureClick = (picture, pictureData) =>{
   picture.addEventListener('click', () => {
     bigPicture.classList.remove('hidden');
@@ -26,20 +35,11 @@ const addOnPictureClick = (picture, pictureData) =>{
     commentCounter.classList.add('hidden');
     commentLoader.classList.add('hidden');
     document.body.classList.add('modal-open');
+
+    document.addEventListener('keydown', onDocumentEscKeyDown);
   });
 
 };
-
-const onDocumentEscKeyDown = (evt) => {
-  if(evt.key === 'Escape'){
-    bigPicture.classList.add('hidden');
-    document.body.classList.remove('modal-open');
-
-    document.removeEventListener('keydown', onDocumentEscKeyDown);
-  }
-};
-
-document.addEventListener('keydown', onDocumentEscKeyDown);
 
 closingButton.addEventListener('click', () => {
   bigPicture.classList.add('hidden');
