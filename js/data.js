@@ -1,5 +1,5 @@
-import {getRandomNumber} from './get-random-number';
-import {getRandomElement} from './util';
+import {getRandomNumber} from './random-number.js';
+import {getRandomElement} from './util.js';
 
 const PHOTOS_COUNT = 25;
 const NAMES = [
@@ -54,5 +54,5 @@ const addPhotos = () => {
   }
 };
 
-export{addPhotos};
+addPhotos();
 export {photosArray};

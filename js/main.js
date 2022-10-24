@@ -1,4 +1,3 @@
 import './util.js';
-import {addPhotos} from './data.js';
-
-addPhotos();
+import './pictures.js';
+import './big-picture.js';
