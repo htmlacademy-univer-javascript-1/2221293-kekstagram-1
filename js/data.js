@@ -49,7 +49,7 @@ const addPhotos = () => {
       url: `photos/${i + 1}.jpg`,
       description: getRandomElement(DESCRIPTIONS),
       likes: getRandomNumber(15,200),
-      comments: addComments(getRandomNumber(1,3))
+      comments: addComments(getRandomNumber(1,20))
     });
   }
 };
