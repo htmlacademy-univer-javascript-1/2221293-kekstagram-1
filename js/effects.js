@@ -17,11 +17,9 @@ const image = preview.querySelector('img');
 const effectLevel = form.querySelector('.img-upload__effect-level');
 const effectLevelValue = form.querySelector('.effect-level__value');
 const slider = form.querySelector('.effect-level__slider');
+const defaultImageClass = image.classList[0];
 
 let currentEffect = '';
-
-effectLevelValue.value = MAX_EFFECT_VALUE;
-effectLevel.classList.add('visually-hidden');
 
 noUiSlider.create(slider, {
   range: {
@@ -68,6 +66,13 @@ const effects = {
   },
 };
 
+const setDefaultEffect = () => {
+  effectLevel.classList.add('visually-hidden');
+
+  image.className = defaultImageClass;
+  image.style.filter = effects.none;
+};
+
 const setEffect = (effect) => {
   image.style.filter = effects[effect.replace('effects__preview--','')]();
 };
@@ -100,3 +105,5 @@ const onSliderChange = ()=>{
 
 slider.noUiSlider.on('change', onSliderChange);
 effectsList.addEventListener('click', onEffectsListClick);
+
+export {setDefaultEffect};

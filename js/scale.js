@@ -8,6 +8,11 @@ const image = imageOverlay.querySelector('.img-upload__preview').querySelector('
 const scaleControl = imageOverlay.querySelector('.img-upload__scale');
 const scaleField = scaleControl.querySelector('.scale__control--value');
 
+const setDefaultScale = () => {
+  scaleField.value = `${MAX_SCALE_VALUE}%`;
+  image.style = `transform: scale(${1})`;
+};
+
 const setCorrectValue = (scaleValue) => {
   if(scaleValue < MIN_SCALE_VALUE){
     return MIN_SCALE_VALUE;
@@ -43,3 +48,5 @@ const onScaleControlClick = (evt) => {
 };
 
 scaleControl.addEventListener('click', onScaleControlClick);
+
+export {setDefaultScale};
