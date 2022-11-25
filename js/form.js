@@ -1,5 +1,7 @@
 import { onFormInput, resetForm } from './form-validation.js';
 import { isEscape } from './util.js';
+import { setDefaultScale } from './scale.js';
+import { setDefaultEffect } from './effects.js';
 
 const form = document.querySelector('.img-upload__form');
 const imageOverlay = document.querySelector('.img-upload__overlay');
@@ -38,6 +40,9 @@ const onFileInput = () => {
   cancelButton.addEventListener('click', onCloseClick);
   document.addEventListener('keydown', onDocumentEscKeyDown);
   form.addEventListener('submit', onFormInput);
+
+  setDefaultScale();
+  setDefaultEffect();
 };
 
 uploadFileButton.addEventListener('input', onFileInput);
