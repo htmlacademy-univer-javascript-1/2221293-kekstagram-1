@@ -4,6 +4,7 @@ import './big-picture.js';
 import './form.js';
 import './form-validation.js';
 import './effects.js';
+import './filters.js';
 import './scale.js';
 
 let photos = [];
@@ -11,6 +12,7 @@ let photos = [];
 const onSuccess = (data) => {
   photos = data.slice();
   renderPhotos(photos);
+  document.querySelector('.img-filters').classList.remove('img-filters--inactive');
 };
 
 const onFail = () => {
@@ -27,4 +29,8 @@ const onFail = () => {
   document.body.append(messageAlert);
 };
 
+const getData = () => photos;
+
 sendRequest(onSuccess, onFail, 'GET');
+
+export {getData};
