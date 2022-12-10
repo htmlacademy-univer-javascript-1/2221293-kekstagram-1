@@ -1,6 +1,6 @@
 import { createComment } from './comments.js';
 import { isEscape } from './util.js';
-import { declineNumber } from './numberDeclination.js';
+import { declineNumber } from './number-declination.js';
 
 const COMMENTS_STEP = 5;
 
